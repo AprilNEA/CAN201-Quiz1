@@ -46,11 +46,11 @@ class ProximityGameClient:
                 elif message.get('type') == 'guess_result':
                     player = message['player']
                     guess = message['guess']
-                    difference = message['difference']
+                    result = message['message']
                     if player != self.name:
-                        print(f"\n{player} guessed {guess}. Difference: {difference}")
+                        print(f"\n{player} guessed {guess}.\n Result: {result}")
                     else:
-                        print(f"\nYour guess was {guess}. Difference: {difference}")
+                        print(f"\nYour guess was {guess}.\n Result: {result}")
                         
                 elif message.get('type') == 'game_over':
                     print(f"\n{message['message']}")

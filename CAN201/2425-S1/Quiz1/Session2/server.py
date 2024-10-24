@@ -92,7 +92,7 @@ class ProximityGameServer:
             'type': 'guess_result',
             'player': current_player,
             'guess': guess,
-            'difference': difference,
+            # 'difference': difference,
             'message': f"{current_player} guessed {guess}, which is {'too high' if guess > self.target_number else 'too low'}"
         })
         
